@@ -20,7 +20,7 @@ if (false === preg_match($pattern, $uri, $matches)) {
 
 $jobName = $matches[1];
 
-if (false === $json = @file_get_contents('http://localhost:8080/api/json')) {
+if (false === $json = @file_get_contents('http://127.0.0.1:8080/api/json')) {
     header(sprintf('%s 204 No Content', $protocol));
     exit();
 }
